@@ -20,7 +20,6 @@ export class UsersController {
   @Post()
   @UsePipes(new ValidationPipe())
   SaveToDb(@Body() value: UserDataDto) {
-    console.log(value);
     return this.UserDataService.SaveToDb(value);
   }
 }
